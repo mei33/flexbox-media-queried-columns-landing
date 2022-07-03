@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mei33.github.io/flexbox-media-queried-columns-landing",
   "dependencies": {
+    "@jetbrains/ring-ui": "^5.0.14",
     "@mei33/flexbox-media-queried-columns": "1.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
