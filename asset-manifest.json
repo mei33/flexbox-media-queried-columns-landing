@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/flexbox-media-queried-columns-landing/static/css/main.b89f391e.css",
+    "main.js": "/flexbox-media-queried-columns-landing/static/js/main.f723037d.js",
+    "static/js/787.572fd598.chunk.js": "/flexbox-media-queried-columns-landing/static/js/787.572fd598.chunk.js",
+    "index.html": "/flexbox-media-queried-columns-landing/index.html",
+    "main.b89f391e.css.map": "/flexbox-media-queried-columns-landing/static/css/main.b89f391e.css.map",
+    "main.f723037d.js.map": "/flexbox-media-queried-columns-landing/static/js/main.f723037d.js.map",
+    "787.572fd598.chunk.js.map": "/flexbox-media-queried-columns-landing/static/js/787.572fd598.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b89f391e.css",
+    "static/js/main.f723037d.js"
+  ]
+}
