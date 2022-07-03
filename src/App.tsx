@@ -2,7 +2,7 @@ import React from "react";
 
 import prettier from "prettier";
 import parserPostCss from "prettier/parser-postcss";
-import { getMediaQueriedColumnsCssFunc, MediaQueriesDict } from "columns";
+import { getMediaQueriedColumnsCssFunc, MediaQueriesDict } from "@mei33/flexbox-media-queried-columns";
 
 import { getRandomColor } from "./utils/getRandomColor";
 import "./App.css";
