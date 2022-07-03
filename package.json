@@ -2,6 +2,7 @@
   "name": "columns-landing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mei33.github.io/flexbox-media-queried-columns-landing",
   "dependencies": {
     "@mei33/flexbox-media-queried-columns": "1.0.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "2.7.1"
   }
 }
