@@ -2,7 +2,10 @@ import React from "react";
 
 import prettier from "prettier";
 import parserPostCss from "prettier/parser-postcss";
-import { getMediaQueriedColumnsCssFunc, MediaQueriesDict } from "@mei33/flexbox-media-queried-columns";
+import {
+  getMediaQueriedColumnsCssFunc,
+  MediaQueriesDict,
+} from "@mei33/flexbox-media-queried-columns";
 
 import { getRandomColor } from "./utils/getRandomColor";
 import "./App.css";
@@ -107,6 +110,24 @@ function App() {
 
   return (
     <div className="App">
+      <div className="App__intro">
+        <h1>Flexbox media queried columns</h1>
+        <p>
+          Wouldn't it be nice to define media queries in your CSS-in-JS with
+          only one function? If your answer if 'yes' you might be interested in{" "}
+          <a
+            href="https://css-tricks.com/responsive-layouts-fewer-media-queries/"
+            target="_blank"
+          >
+            Responsive Layouts, Fewer Media Queries article
+          </a>{" "}
+          of <a href="https://css-only.art/">Temani Afif</a>. This landing
+          allows you to generate your custom rule with{" "}
+          <a href="https://github.com/mei33/flexbox-media-queried-columns">
+            flexbox-media-queried-columns library
+          </a>
+        </p>
+      </div>
       <form className="App__form">
         <div className="Form__group">
           <label>
