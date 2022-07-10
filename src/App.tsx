@@ -6,6 +6,8 @@ import {
   getMediaQueriedColumnsCssFunc,
   MediaQueriesDict,
 } from "@mei33/flexbox-media-queried-columns";
+import "@jetbrains/ring-ui/dist/style.css";
+import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 
 import { getRandomColor } from "./utils/getRandomColor";
 import "./App.css";
@@ -28,6 +30,11 @@ function App() {
   const [cssClassName, setCssClassName] = React.useState(
     INITIAL_CSS_CLASS_NAME
   );
+
+  const [isCopiedNotifierVisible, setIsCopiedNotifierVisible] =
+    React.useState(false);
+  const [isCopiedNotifierClosing, setIsCopiedNotifierClosing] =
+    React.useState(false);
 
   const width = getMediaQueriedColumnsCssFunc({ mediaQueries, gap });
 
@@ -69,7 +76,26 @@ function App() {
 
   const handleCopyClampFuncClick = () => {
     void navigator.clipboard.writeText(width);
+    setIsCopiedNotifierVisible(true);
+
+    setTimeout(() => {
+      setIsCopiedNotifierClosing(true);
+    }, 2000);
   };
+
+  React.useEffect(() => {
+    if (isCopiedNotifierClosing) {
+      setTimeout(() => {
+        setIsCopiedNotifierVisible(false);
+      }, 2000);
+    }
+  }, [isCopiedNotifierClosing]);
+
+  React.useEffect(() => {
+    if (!isCopiedNotifierVisible) {
+      setIsCopiedNotifierClosing(false);
+    }
+  }, [isCopiedNotifierVisible]);
 
   const renderCode = () => {
     const classNameToDisplay = cssClassName || INITIAL_CSS_CLASS_NAME;
@@ -110,6 +136,18 @@ function App() {
 
   return (
     <div className="App">
+      {isCopiedNotifierVisible && (
+        <Alert
+          className="Alert"
+          closeable={false}
+          isClosing={isCopiedNotifierClosing}
+          showWithAnimation
+          type={Alert.Type.SUCCESS}
+        >
+          Copied!
+        </Alert>
+      )}
+
       <div className="App__intro">
         <h1>Flexbox media queried columns</h1>
         <p>
@@ -217,7 +255,10 @@ function App() {
           <code>{renderCode()}</code>
         </pre>
         <div className="App__actions">
-          <button onClick={handleCopyClampFuncClick}>
+          <button
+            disabled={isCopiedNotifierVisible}
+            onClick={handleCopyClampFuncClick}
+          >
             Copy clamp function
           </button>
         </div>
