@@ -8,6 +8,7 @@ import {
 } from "@mei33/flexbox-media-queried-columns";
 import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
+import Code from "@jetbrains/ring-ui/dist/code/code";
 import Text from "@jetbrains/ring-ui/dist/text/text";
 
 import { getRandomColor } from "./utils/getRandomColor";
@@ -257,9 +258,7 @@ function App() {
       </form>
 
       <div className="App__code">
-        <pre>
-          <code>{renderCode()}</code>
-        </pre>
+        <Code code={renderCode()} language="css" />
         <div className="App__actions">
           <button
             disabled={isCopiedNotifierVisible}
