@@ -224,7 +224,7 @@ function App() {
                     <Input
                       className="Form__inputNumber"
                       type="number"
-                      value={breakpoint}
+                      value={Number(breakpoint)}
                       onChange={({ target }) =>
                         handleBreakpointsListChange(
                           Number(breakpoint),
@@ -235,7 +235,7 @@ function App() {
                     <Input
                       className="Form__inputNumber"
                       type="number"
-                      value={columns}
+                      value={Number(columns)}
                       onChange={({ target }) =>
                         handleColumnsInBreakpointChange(
                           Number(breakpoint),
