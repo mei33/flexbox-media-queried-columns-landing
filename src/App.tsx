@@ -10,6 +10,7 @@ import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 import Button from "@jetbrains/ring-ui/dist/button/button";
 import Code from "@jetbrains/ring-ui/dist/code/code";
+import { H1 } from "@jetbrains/ring-ui/dist/heading/heading";
 import Input from "@jetbrains/ring-ui/dist/input/input";
 import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
@@ -154,9 +155,7 @@ function App() {
       )}
 
       <div className="App__intro">
-        <h1>
-          <Text>Flexbox media queried columns</Text>
-        </h1>
+        <H1>Flexbox media queried columns</H1>
         <p>
           <Text>
             Wouldn't it be nice to define media queries in your CSS-in-JS with
