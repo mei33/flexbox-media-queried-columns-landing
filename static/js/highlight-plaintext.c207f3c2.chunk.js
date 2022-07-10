@@ -1,0 +1,2 @@
+(self.webpackChunkcolumns_landing=self.webpackChunkcolumns_landing||[]).push([[4307],{7721:function(n){n.exports=function(n){return{name:"Plain text",aliases:["text","txt"],disableAutodetect:!0}}}}]);
+//# sourceMappingURL=highlight-plaintext.c207f3c2.chunk.js.map

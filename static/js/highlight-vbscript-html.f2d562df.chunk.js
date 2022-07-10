@@ -1,0 +1,2 @@
+(self.webpackChunkcolumns_landing=self.webpackChunkcolumns_landing||[]).push([[4722],{1434:function(n){n.exports=function(n){return{name:"VBScript in HTML",subLanguage:"xml",contains:[{begin:"<%",end:"%>",subLanguage:"vbscript"}]}}}}]);
+//# sourceMappingURL=highlight-vbscript-html.f2d562df.chunk.js.map

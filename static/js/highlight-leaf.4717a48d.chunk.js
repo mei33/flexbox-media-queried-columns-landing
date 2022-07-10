@@ -1,0 +1,2 @@
+(self.webpackChunkcolumns_landing=self.webpackChunkcolumns_landing||[]).push([[5671],{7898:function(n){n.exports=function(n){return{name:"Leaf",contains:[{className:"function",begin:"#+[A-Za-z_0-9]*\\(",end:/ \{/,returnBegin:!0,excludeEnd:!0,contains:[{className:"keyword",begin:"#+"},{className:"title",begin:"[A-Za-z_][A-Za-z_0-9]*"},{className:"params",begin:"\\(",end:"\\)",endsParent:!0,contains:[{className:"string",begin:'"',end:'"'},{className:"variable",begin:"[A-Za-z_][A-Za-z_0-9]*"}]}]}]}}}}]);
+//# sourceMappingURL=highlight-leaf.4717a48d.chunk.js.map

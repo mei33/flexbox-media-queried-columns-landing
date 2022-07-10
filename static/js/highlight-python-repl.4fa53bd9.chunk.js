@@ -1,0 +1,2 @@
+(self.webpackChunkcolumns_landing=self.webpackChunkcolumns_landing||[]).push([[8186],{2888:function(n){n.exports=function(n){return{aliases:["pycon"],contains:[{className:"meta",starts:{end:/ |$/,starts:{end:"$",subLanguage:"python"}},variants:[{begin:/^>>>(?=[ ]|$)/},{begin:/^\.\.\.(?=[ ]|$)/}]}]}}}}]);
+//# sourceMappingURL=highlight-python-repl.4fa53bd9.chunk.js.map
