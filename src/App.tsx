@@ -8,6 +8,7 @@ import {
 } from "@mei33/flexbox-media-queried-columns";
 import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
+import Text from "@jetbrains/ring-ui/dist/text/text";
 
 import { getRandomColor } from "./utils/getRandomColor";
 import "./App.css";
@@ -149,21 +150,26 @@ function App() {
       )}
 
       <div className="App__intro">
-        <h1>Flexbox media queried columns</h1>
+        <h1>
+          <Text>Flexbox media queried columns</Text>
+        </h1>
         <p>
-          Wouldn't it be nice to define media queries in your CSS-in-JS with
-          only one function? If your answer if 'yes' you might be interested in{" "}
-          <a
-            href="https://css-tricks.com/responsive-layouts-fewer-media-queries/"
-            target="_blank"
-          >
-            Responsive Layouts, Fewer Media Queries article
-          </a>{" "}
-          of <a href="https://css-only.art/">Temani Afif</a>. This landing
-          allows you to generate your custom rule with{" "}
-          <a href="https://github.com/mei33/flexbox-media-queried-columns">
-            flexbox-media-queried-columns library
-          </a>
+          <Text>
+            Wouldn't it be nice to define media queries in your CSS-in-JS with
+            only one function? If your answer if 'yes' you might be interested
+            in{" "}
+            <a
+              href="https://css-tricks.com/responsive-layouts-fewer-media-queries/"
+              target="_blank"
+            >
+              Responsive Layouts, Fewer Media Queries article
+            </a>{" "}
+            of <a href="https://css-only.art/">Temani Afif</a>. This landing
+            allows you to generate your custom rule with{" "}
+            <a href="https://github.com/mei33/flexbox-media-queried-columns">
+              flexbox-media-queried-columns library
+            </a>
+          </Text>
         </p>
       </div>
       <form className="App__form">
