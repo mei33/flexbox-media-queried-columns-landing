@@ -11,6 +11,7 @@ import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 import Button from "@jetbrains/ring-ui/dist/button/button";
 import Code from "@jetbrains/ring-ui/dist/code/code";
 import { H1 } from "@jetbrains/ring-ui/dist/heading/heading";
+import removeIcon from "@jetbrains/icons/close";
 import Input from "@jetbrains/ring-ui/dist/input/input";
 import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
@@ -76,6 +77,18 @@ function App() {
       return {
         ...prevState,
         [Math.floor(maxBreakpoint * 1.1)]: prevState[maxBreakpoint] + 1,
+      };
+    });
+  };
+
+  const handleRemoveBreakpointClick = (
+    breakpointToRemove: keyof MediaQueriesDict
+  ) => {
+    setMediaQueries((prevState) => {
+      const { [breakpointToRemove]: _, ...restBreakpoints } = prevState;
+
+      return {
+        ...restBreakpoints,
       };
     });
   };
@@ -220,6 +233,14 @@ function App() {
             {Object.entries(mediaQueries).map(
               ([breakpoint, columns], index) => (
                 <fieldset className="Form__group" key={index}>
+                  <Button
+                    className="Form__groupIcon"
+                    icon={removeIcon}
+                    title="Remove query"
+                    onClick={() =>
+                      handleRemoveBreakpointClick(Number(breakpoint))
+                    }
+                  />
                   <label className="Form__spaced">
                     <Input
                       className="Form__inputNumber"

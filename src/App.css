@@ -53,6 +53,18 @@
 
 .Form__group {
   margin-bottom: 10px;
+  position: relative;
+}
+
+.Form__groupIcon {
+  position: absolute;
+  left: 100%;
+  padding-left: 15px;
+  opacity: 0;
+}
+
+.Form__group:hover > .Form__groupIcon {
+  opacity: 1;
 }
 
 .Form__spaced {
