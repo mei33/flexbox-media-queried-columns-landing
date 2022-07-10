@@ -9,6 +9,7 @@ import {
 import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 import Code from "@jetbrains/ring-ui/dist/code/code";
+import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
 
 import { getRandomColor } from "./utils/getRandomColor";
@@ -159,17 +160,17 @@ function App() {
             Wouldn't it be nice to define media queries in your CSS-in-JS with
             only one function? If your answer if 'yes' you might be interested
             in{" "}
-            <a
+            <Link
               href="https://css-tricks.com/responsive-layouts-fewer-media-queries/"
               target="_blank"
             >
               Responsive Layouts, Fewer Media Queries article
-            </a>{" "}
-            of <a href="https://css-only.art/">Temani Afif</a>. This landing
-            allows you to generate your custom rule with{" "}
-            <a href="https://github.com/mei33/flexbox-media-queried-columns">
+            </Link>{" "}
+            of <Link href="https://css-only.art/">Temani Afif</Link>. This
+            landing allows you to generate your custom rule with{" "}
+            <Link href="https://github.com/mei33/flexbox-media-queried-columns">
               flexbox-media-queried-columns library
-            </a>
+            </Link>
           </Text>
         </p>
       </div>
