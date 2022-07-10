@@ -8,6 +8,7 @@ import {
 } from "@mei33/flexbox-media-queried-columns";
 import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
+import Button from "@jetbrains/ring-ui/dist/button/button";
 import Code from "@jetbrains/ring-ui/dist/code/code";
 import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
@@ -201,18 +202,23 @@ function App() {
         </div>
 
         <div className="Form__group Form__spaced">
-          <button
-            type="button"
+          <Button
+            className="Form__buttonLeft"
             onClick={() => setItemsOnScreen((prevState) => prevState + 1)}
+            text
+            type="button"
           >
             More items
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            className="Form__buttonRight"
+            danger
             onClick={() => setItemsOnScreen((prevState) => prevState - 1)}
+            text
+            type="button"
           >
             Less items
-          </button>
+          </Button>
         </div>
 
         <fieldset>
@@ -248,25 +254,26 @@ function App() {
               )
             )}
           </div>
-          <button
+          <Button
             className="Form__buttonMain"
             type="button"
             onClick={handleAddMoreBreakpointsClick}
           >
             Add more breakpoints
-          </button>
+          </Button>
         </fieldset>
       </form>
 
       <div className="App__code">
         <Code code={renderCode()} language="css" />
         <div className="App__actions">
-          <button
+          <Button
+            primary
             disabled={isCopiedNotifierVisible}
             onClick={handleCopyClampFuncClick}
           >
             Copy clamp function
-          </button>
+          </Button>
         </div>
       </div>
 

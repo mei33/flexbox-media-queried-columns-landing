@@ -68,6 +68,14 @@
   width: 100%;
 }
 
+.Form__buttonLeft {
+  padding-left: 0;
+}
+
+.Form__buttonRight {
+  padding-right: 0;
+}
+
 .Form__inputLabelled {
   margin-left: 10px;
 }
