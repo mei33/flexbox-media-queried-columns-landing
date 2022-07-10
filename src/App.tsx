@@ -10,6 +10,7 @@ import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 import Button from "@jetbrains/ring-ui/dist/button/button";
 import Code from "@jetbrains/ring-ui/dist/code/code";
+import Input from "@jetbrains/ring-ui/dist/input/input";
 import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
 
@@ -177,28 +178,22 @@ function App() {
       </div>
       <form className="App__form">
         <div className="Form__group">
-          <label>
-            CSS class
-            <input
-              className="Form__inputLabelled"
-              type="string"
-              name="css-class"
-              value={cssClassName}
-              onChange={({ target }) => setCssClassName(target.value)}
-            />
-          </label>
+          <Input
+            label="CSS class"
+            name="css-class"
+            type="string"
+            value={cssClassName}
+            onChange={({ target }) => setCssClassName(target.value)}
+          />
         </div>
         <div className="Form__group">
-          <label>
-            Gap
-            <input
-              className="Form__inputLabelled Form__inputNumber"
-              type="number"
-              name="gap"
-              value={gap}
-              onChange={({ target }) => setGap(Number(target.value))}
-            />
-          </label>
+          <Input
+            label="Gap"
+            name="gap"
+            type="number"
+            value={gap}
+            onChange={({ target }) => setGap(Number(target.value))}
+          />
         </div>
 
         <div className="Form__group Form__spaced">
@@ -227,7 +222,7 @@ function App() {
               ([breakpoint, columns], index) => (
                 <fieldset className="Form__group" key={index}>
                   <label className="Form__spaced">
-                    <input
+                    <Input
                       className="Form__inputNumber"
                       type="number"
                       value={breakpoint}
@@ -238,7 +233,7 @@ function App() {
                         )
                       }
                     />
-                    <input
+                    <Input
                       className="Form__inputNumber"
                       type="number"
                       value={columns}
