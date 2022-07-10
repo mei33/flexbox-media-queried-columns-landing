@@ -45,6 +45,16 @@ function App() {
 
   const width = getMediaQueriedColumnsCssFunc({ mediaQueries, gap });
 
+  const isAddMoreBreakpointsAllowed = React.useMemo(() => {
+    const breakpointsList = Object.keys(mediaQueries);
+
+    if (!breakpointsList.length) {
+      return false;
+    }
+
+    return !breakpointsList.filter((breakpoint) => !Number(breakpoint)).length;
+  }, [mediaQueries]);
+
   const handleBreakpointsListChange = (
     breakpointOld: keyof MediaQueriesDict,
     breakpointUpdated: keyof MediaQueriesDict
@@ -270,6 +280,7 @@ function App() {
             )}
           </div>
           <Button
+            disabled={!isAddMoreBreakpointsAllowed}
             className="Form__buttonMain"
             type="button"
             onClick={handleAddMoreBreakpointsClick}
