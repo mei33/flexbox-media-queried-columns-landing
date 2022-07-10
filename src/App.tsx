@@ -1,20 +1,20 @@
 import React from "react";
 
-import prettier from "prettier";
-import parserPostCss from "prettier/parser-postcss";
-import {
-  getMediaQueriedColumnsCssFunc,
-  MediaQueriesDict,
-} from "@mei33/flexbox-media-queried-columns";
 import "@jetbrains/ring-ui/dist/style.css";
 import Alert from "@jetbrains/ring-ui/dist/alert/alert";
 import Button from "@jetbrains/ring-ui/dist/button/button";
 import Code from "@jetbrains/ring-ui/dist/code/code";
 import { H1 } from "@jetbrains/ring-ui/dist/heading/heading";
-import removeIcon from "@jetbrains/icons/close";
 import Input from "@jetbrains/ring-ui/dist/input/input";
 import Link from "@jetbrains/ring-ui/dist/link/link";
 import Text from "@jetbrains/ring-ui/dist/text/text";
+import removeIcon from "@jetbrains/icons/close";
+import {
+  getMediaQueriedColumnsCssFunc,
+  MediaQueriesDict,
+} from "@mei33/flexbox-media-queried-columns";
+import prettier from "prettier";
+import parserPostCss from "prettier/parser-postcss";
 
 import { getRandomColor } from "./utils/getRandomColor";
 import "./App.css";
