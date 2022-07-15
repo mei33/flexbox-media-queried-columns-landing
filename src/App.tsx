@@ -145,19 +145,33 @@ function App() {
     });
   };
 
-  const items = new Array(itemsOnScreen);
-  for (let i = 0; i < itemsOnScreen; ++i) {
-    items[i] = (
+  const renderedItems = React.useMemo(() => {
+    const items = new Array(itemsOnScreen);
+    for (let i = 0; i < itemsOnScreen; ++i) {
+      items[i] = (
+        <div
+          className="App__column"
+          style={
+            {
+              "--bgColor": getRandomColor(),
+            } as React.CSSProperties
+          }
+        />
+      );
+    }
+
+    return items.map((item, index) => (
       <div
-        className="App__column"
-        style={
-          {
-            "--bgColor": getRandomColor(),
-          } as React.CSSProperties
-        }
-      />
-    );
-  }
+        key={index}
+        style={{
+          flex: width,
+          maxWidth: width,
+        }}
+      >
+        {item}
+      </div>
+    ));
+  }, [itemsOnScreen]);
 
   return (
     <div className="App">
@@ -308,17 +322,7 @@ function App() {
         className="App__columns"
         style={{ "--gap": `${gap}px` } as React.CSSProperties}
       >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              flex: width,
-              maxWidth: width,
-            }}
-          >
-            {item}
-          </div>
-        ))}
+        {renderedItems}
       </div>
     </div>
   );
