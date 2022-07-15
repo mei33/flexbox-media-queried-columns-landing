@@ -48,10 +48,6 @@ function App() {
   const isAddMoreBreakpointsAllowed = React.useMemo(() => {
     const breakpointsList = Object.keys(mediaQueries);
 
-    if (!breakpointsList.length) {
-      return false;
-    }
-
     return !breakpointsList.filter((breakpoint) => !Number(breakpoint)).length;
   }, [mediaQueries]);
 
@@ -243,17 +239,21 @@ function App() {
             {Object.entries(mediaQueries).map(
               ([breakpoint, columns], index) => (
                 <fieldset className="Form__group" key={index}>
-                  <Button
-                    className="Form__groupIcon"
-                    icon={removeIcon}
-                    title="Remove query"
-                    onClick={() =>
-                      handleRemoveBreakpointClick(Number(breakpoint))
-                    }
-                  />
+                  {Object.keys(mediaQueries).length > 1 && (
+                    <Button
+                      className="Form__groupIcon"
+                      icon={removeIcon}
+                      title="Remove query"
+                      onClick={() =>
+                        handleRemoveBreakpointClick(Number(breakpoint))
+                      }
+                    />
+                  )}
+
                   <label className="Form__spaced">
                     <Input
                       className="Form__inputNumber"
+                      error={Number(breakpoint) ? undefined : ""}
                       type="number"
                       value={Number(breakpoint)}
                       onChange={({ target }) =>
@@ -265,6 +265,7 @@ function App() {
                     />
                     <Input
                       className="Form__inputNumber"
+                      error={Number(columns) ? undefined : ""}
                       type="number"
                       value={Number(columns)}
                       onChange={({ target }) =>
