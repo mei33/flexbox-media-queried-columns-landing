@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/flexbox-media-queried-columns-landing/static/css/main.c41428fb.css",
-    "main.js": "/flexbox-media-queried-columns-landing/static/js/main.c1940c77.js",
+    "main.js": "/flexbox-media-queried-columns-landing/static/js/main.0bdbaed1.js",
     "highlight-1c.js": "/flexbox-media-queried-columns-landing/static/js/highlight-1c.97db694d.chunk.js",
     "highlight-abnf.js": "/flexbox-media-queried-columns-landing/static/js/highlight-abnf.bedff8ff.chunk.js",
     "highlight-accesslog.js": "/flexbox-media-queried-columns-landing/static/js/highlight-accesslog.eccfe23b.chunk.js",
@@ -196,7 +196,7 @@
     "static/js/787.572fd598.chunk.js": "/flexbox-media-queried-columns-landing/static/js/787.572fd598.chunk.js",
     "index.html": "/flexbox-media-queried-columns-landing/index.html",
     "main.c41428fb.css.map": "/flexbox-media-queried-columns-landing/static/css/main.c41428fb.css.map",
-    "main.c1940c77.js.map": "/flexbox-media-queried-columns-landing/static/js/main.c1940c77.js.map",
+    "main.0bdbaed1.js.map": "/flexbox-media-queried-columns-landing/static/js/main.0bdbaed1.js.map",
     "highlight-1c.97db694d.chunk.js.map": "/flexbox-media-queried-columns-landing/static/js/highlight-1c.97db694d.chunk.js.map",
     "highlight-abnf.bedff8ff.chunk.js.map": "/flexbox-media-queried-columns-landing/static/js/highlight-abnf.bedff8ff.chunk.js.map",
     "highlight-accesslog.eccfe23b.chunk.js.map": "/flexbox-media-queried-columns-landing/static/js/highlight-accesslog.eccfe23b.chunk.js.map",
@@ -392,6 +392,6 @@
   },
   "entrypoints": [
     "static/css/main.c41428fb.css",
-    "static/js/main.c1940c77.js"
+    "static/js/main.0bdbaed1.js"
   ]
 }
